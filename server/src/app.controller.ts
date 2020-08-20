@@ -5,7 +5,7 @@ import { EventPattern } from '@nestjs/microservices';
 export class AppController {
   
   constructor() { }
-  @EventPattern('message_pattern')
+  @EventPattern('message_printed')
   async handleMessagePrinted(data: Record<string, unknown>) {
     console.log(data.text);
   }
